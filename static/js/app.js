@@ -74,7 +74,7 @@ function getDemoInfo(id) {
         var demographicInfo = d3.select("#sample-metadata");
         demographicInfo.html("");
 
-        Object.defineProperties(result).forEach((key) => {
+        Object.entries(result).forEach((key) => {
             demographicInfo.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n");
         });
     });
