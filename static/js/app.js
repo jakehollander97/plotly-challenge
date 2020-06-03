@@ -84,6 +84,7 @@ function getDemoInfo(id) {
 function optionChanged(id) {
     getPlots(id);
     getDemoInfo(id);
+    getGauge(id);
 }
 
 // create function for the initial data rendering
@@ -100,6 +101,7 @@ function init() {
         //call functions to display the data & plots
         getPlots(data.names[0]);
         getDemoInfo(data.names[0]);
+        getGauge(data.names[0]);
     });
 }
 
