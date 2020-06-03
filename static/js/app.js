@@ -1,6 +1,6 @@
 function getPlots(id) {
     //samples.json
-    d3.json("samples.json").then((sampledata) => {
+    d3.json("data/samples.json").then((sampledata) => {
         console.log(sampledata)
         var ids = sampledata.samples[0].otu_ids;
         console.log(ids)
@@ -66,7 +66,7 @@ function getPlots(id) {
 //new function to retrieve data
 function getDemoInfo(id) {
 //read json file
-    d3.json("samples.json").then((data) => {
+    d3.json("data/samples.json").then((data) => {
         var metadata = data.metadata;
         console.log(metadata)
         //filter metadata by id
@@ -90,7 +90,7 @@ function optionChanged(id) {
 function init() {
     var dropdown = d3.select("#selDataset");
     //read the data
-    d3.json("samples.json").then((data) => {
+    d3.json("data/samples.json").then((data) => {
         console.log(data)
         //get id data to dropdown menu
         data.names.forEach(function(name) {
